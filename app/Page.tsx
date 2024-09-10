@@ -2,7 +2,7 @@
 
 
 import { useState, useEffect } from 'react';
-import { Box, Button, Fab } from '@mui/material';
+import { Box, Fab } from '@mui/material';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import Navbar from './components/NavBar';
 import MainSection from './bodyComponents/MainSection';
@@ -15,7 +15,7 @@ import Mainfooter from './footercomponents/Mainfooter';
 
 
 
-const page = () => {
+const Page = () => {
   const [showScroll, setShowScroll] = useState(false);
 
   const checkScrollTop = () => {
@@ -33,24 +33,17 @@ const page = () => {
   useEffect(() => {
     window.addEventListener('scroll', checkScrollTop);
     return () => window.removeEventListener('scroll', checkScrollTop);
-  }, [showScroll]);
+  }, [showScroll, checkScrollTop]);
 
 
 
   return (
-
-
-
     <Box>
       <Box><Navbar /></Box>
-
       <Box><MainSection /></Box>
-
       <Box><Mainfooter /></Box>
-
       {showScroll && (
         <Fab
-
           size="small"
           onClick={scrollToTop}
           sx={{ position: 'fixed', bottom: 20, right: 20, bgcolor: 'rgb(255, 255, 255)', color: 'rgb(0,0,0)' }}
@@ -65,4 +58,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
