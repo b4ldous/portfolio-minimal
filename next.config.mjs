@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // Habilita la exportación estática
-  basePath: '/portfolio-minimal', // Cambia por el nombre exacto de tu repositorio
-  assetPrefix: '/portfolio-minimal', // Nombre exacto del repositorio
+  output: 'export', // Configuración para exportar el proyecto estáticamente
+  basePath: '/portfolio-minimal', // Reemplaza con el nombre de tu repositorio
+  assetPrefix: '/portfolio-minimal', // Reemplaza con el nombre de tu repositorio
   images: {
     unoptimized: true, // GitHub Pages no soporta imágenes optimizadas por Next.js
   },
